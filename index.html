@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudioCut Pro Suite — Télécharger l'App iOS & Android</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'SF Pro Display', 'sans-serif'] },
+                    colors: {
+                        ios: {
+                            bg: '#000000',
+                            card: 'rgba(28, 28, 30, 0.75)',
+                            border: 'rgba(255, 255, 255, 0.1)',
+                            accent: '#0A84FF',
+                            success: '#34C759'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #000000; color: #f5f5f7; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; overflow-x: hidden; }
+        .glass-panel {
+            background: rgba(28, 28, 30, 0.65);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+        .glass-card {
+            background: rgba(44, 44, 46, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 25px rgba(10, 132, 255, 0.4); }
+            50% { box-shadow: 0 0 45px rgba(10, 132, 255, 0.7); }
+        }
+        .ios-download-btn {
+            animation: pulseGlow 3s infinite ease-in-out;
+        }
+        .iphone-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 24px;
+            background: #000;
+            border-bottom-left-radius: 14px;
+            border-bottom-right-radius: 14px;
+            z-index: 20;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased">
+
+    <!-- BARRE DE NAVIGATION STYLE iOS -->
+    <header class="sticky top-0 z-50 glass-panel border-b border-white/10 px-6 py-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                <i data-lucide="clapperboard" class="w-5 h-5 text-white"></i>
+            </div>
+            <span class="font-bold text-lg tracking-tight text-white">StudioCut <span class="text-blue-500">Pro</span></span>
+        </div>
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-zinc-300">
+            <a href="#features" class="hover:text-white transition">Fonctionnalités</a>
+            <a href="#mockups" class="hover:text-white transition">Aperçu App</a>
+            <a href="#download" class="hover:text-white transition">Télécharger</a>
+        </div>
+        <a href="#download" class="px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold shadow-lg shadow-blue-600/30 transition flex items-center gap-1.5 cursor-pointer">
+            <i data-lucide="download" class="w-3.5 h-3.5"></i>
+            <span>Obtenir l'APK</span>
+        </a>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-16 pb-20 px-6 max-w-6xl mx-auto text-center space-y-6">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-semibold tracking-wide">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
+            <span>Version 2.4 — Optimisée PES 2013 & IA</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.1]">
+            Le montage vidéo pro, <br>maintenant dans votre poche.
+        </h1>
+
+        <p class="text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto font-normal leading-relaxed">
+            Profitez d'un studio de montage complet sur mobile et web : timeline multi-piste, découpage, reverse, voix off micro en direct et assistant IA intégré.
+        </p>
+
+        <!-- BOUTON TÉLÉCHARGEMENT PRINCIPAL -->
+        <div id="download" class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="StudioCut_Pro_Suite.apk" download class="ios-download-btn w-full sm:w-auto px-8 py-4 rounded-2xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-base shadow-xl flex items-center justify-center gap-3 transition cursor-pointer">
+                <i data-lucide="smartphone" class="w-5 h-5"></i>
+                <div class="text-left">
+                    <div class="text-[10px] uppercase font-semibold text-blue-200 tracking-wider">Téléchargement Direct</div>
+                    <div class="text-sm font-bold">Télécharger l'APK (Android)</div>
+                </div>
+            </a>
+            <a href="index.html" class="w-full sm:w-auto px-6 py-4 rounded-2xl glass-card hover:bg-zinc-800 text-zinc-200 font-semibold text-base transition flex items-center justify-center gap-2">
+                <i data-lucide="globe" class="w-4 h-4 text-cyan-400"></i>
+                <span>Lancer dans le Navigateur</span>
+            </a>
+        </div>
+        <p class="text-xs text-zinc-500">100% Gratuit • Sans publicité • Fonctionne hors-ligne</p>
+    </section>
+
+    <!-- SECTION MOCKUPS IPHONE -->
+    <section id="mockups" class="py-16 px-6 max-w-6xl mx-auto">
+        <div class="text-center space-y-3 mb-12">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Interface épurée & Expérience fluide</h2>
+            <p class="text-sm text-zinc-400 max-w-md mx-auto">Une ergonomie inspirée d'iOS pour un contrôle absolu sur vos montages.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
+            <!-- Mockup 1 -->
+            <div class="glass-card rounded-[40px] p-4 shadow-2xl relative border border-white/10 max-w-[280px] mx-auto w-full">
+                <div class="iphone-notch"></div>
+                <div class="bg-black rounded-[32px] overflow-hidden aspect-[9/19.5] flex flex-col justify-between p-4 relative">
+                    <div class="pt-6 text-center space-y-1">
+                        <span class="text-[10px] text-cyan-400 font-bold uppercase">Mode IA Actif</span>
+                        <h4 class="text-xs font-bold text-white">Sous-titrage & PES 2013</h4>
+                    </div>
+                    <div class="my-auto bg-blue-950/40 border border-blue-500/30 rounded-2xl p-4 text-center space-y-2">
+                        <div class="w-10 h-10 rounded-full bg-blue-600/30 text-blue-400 mx-auto flex items-center justify-center">
+                            <i data-lucide="wand-2" class="w-5 h-5"></i>
+                        </div>
+                        <span class="text-xs font-semibold text-zinc-200 block">Montage IA 1-Clic</span>
+                        <p class="text-[10px] text-zinc-400">Synchronisation automatique de la voix off et étalonnage.</p>
+                    </div>
+                    <div class="text-center pb-2">
+                        <span class="text-[10px] text-zinc-500">StudioCut Pro v2.4</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mockup 2 (Principal) -->
+            <div class="glass-card rounded-[40px] p-4 shadow-2xl relative border border-blue-500/30 max-w-[280px] mx-auto w-full scale-105">
+                <div class="iphone-notch"></div>
+                <div class="bg-black rounded-[32px] overflow-hidden aspect-[9/19.5] flex flex-col justify-between p-4 relative">
+                    <div class="pt-6 text-center space-y-1">
+                        <span class="text-[10px] text-emerald-400 font-bold uppercase">Lecteur Canvas Pro</span>
+                        <h4 class="text-xs font-bold text-white">Aperçu en direct</h4>
+                    </div>
+                    <div class="my-auto bg-zinc-900 rounded-2xl p-3 border border-zinc-800 space-y-3">
+                        <div class="aspect-video bg-blue-600/20 rounded-xl flex items-center justify-center border border-blue-500/40">
+                            <i data-lucide="play" class="w-8 h-8 text-cyan-400 fill-current"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="h-1.5 bg-blue-600 rounded-full w-3/4"></div>
+                            <div class="h-1.5 bg-zinc-700 rounded-full w-1/2"></div>
+                        </div>
+                    </div>
+                    <div class="text-center pb-2">
+                        <span class="text-[10px] text-zinc-500">Multi-piste & Timeline</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mockup 3 -->
+            <div class="glass-card rounded-[40px] p-4 shadow-2xl relative border border-white/10 max-w-[280px] mx-auto w-full">
+                <div class="iphone-notch"></div>
+                <div class="bg-black rounded-[32px] overflow-hidden aspect-[9/19.5] flex flex-col justify-between p-4 relative">
+                    <div class="pt-6 text-center space-y-1">
+                        <span class="text-[10px] text-amber-400 font-bold uppercase">Bibliothèque</span>
+                        <h4 class="text-xs font-bold text-white">Transitions & Stickers</h4>
+                    </div>
+                    <div class="my-auto space-y-2">
+                        <div class="bg-zinc-900 p-2.5 rounded-xl border border-zinc-800 text-[11px] font-bold text-zinc-200 flex items-center justify-between">
+                            <span>✨ Fondu (Fade)</span>
+                            <span class="text-cyan-400 text-[10px]">Actif</span>
+                        </div>
+                        <div class="bg-zinc-900 p-2.5 rounded-xl border border-zinc-800 text-[11px] font-bold text-rose-400 flex items-center justify-between">
+                            <span>➡️ Flèche Rouge</span>
+                            <span class="text-zinc-400 text-[10px]">Sticker</span>
+                        </div>
+                    </div>
+                    <div class="text-center pb-2">
+                        <span class="text-[10px] text-zinc-500">Export Rapide WebM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GRILLE DES FONCTIONNALITÉS -->
+    <section id="features" class="py-16 px-6 max-w-6xl mx-auto space-y-12">
+        <div class="text-center space-y-3">
+            <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Tout ce dont vous avez besoin</h2>
+            <p class="text-sm text-zinc-400 max-w-lg mx-auto">Des outils professionnels intégrés dans une interface ultra-légère.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-3xl space-y-3">
+                <div class="w-10 h-10 rounded-2xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center border border-cyan-500/30">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">Montage IA & PES 2013</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Détection automatique des actions, sous-titrage instantané et indices contextuels de football.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-3xl space-y-3">
+                <div class="w-10 h-10 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center border border-blue-500/30">
+                    <i data-lucide="split" class="w-5 h-5"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">Transitions Pro</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Appliquez des fondus, glissements, zooms dynamiques et flous entre vos clips en un seul clic.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-3xl space-y-3">
+                <div class="w-10 h-10 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center border border-amber-500/30">
+                    <i data-lucide="navigation" class="w-5 h-5"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">Stickers & Flèches</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Enrichissez vos vidéos avec des flèches rouges, étoiles, viseurs de but et emojis dynamiques.</p>
+            </div>
+
+            <div class="glass-card p-6 rounded-3xl space-y-3">
+                <div class="w-10 h-10 rounded-2xl bg-rose-500/20 text-rose-400 flex items-center justify-center border border-rose-500/30">
+                    <i data-lucide="mic" class="w-5 h-5"></i>
+                </div>
+                <h3 class="font-bold text-white text-base">Voix Off Micro & TTS</h3>
+                <p class="text-xs text-zinc-400 leading-relaxed">Enregistrez votre voix en direct depuis votre micro ou activez la synthèse vocale française.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="mt-auto border-t border-white/10 py-8 px-6 text-center text-xs text-zinc-500 space-y-2">
+        <p>© 2026 StudioCut Pro Suite. Tous droits réservés.</p>
+        <p>Conçu avec un design épuré style iOS pour Android & Web.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
